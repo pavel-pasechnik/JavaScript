@@ -25,7 +25,7 @@ console.log(globalVar); // Доступ до globalVar із глобальної
 
 if (true) {
   const cVar = "C";
-  console.log(globalVariable); // Доступ до globalVar з блоку C
+  console.log(globalVar); // Доступ до globalVar з блоку C
   console.log(cVar); // Доступ до cVar з блоку C
   // Немає доступу до aVar і bVar
 }

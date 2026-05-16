@@ -10,7 +10,8 @@
 // console.log(message.toLowerCase()); // "welcome to bahamas!"
 // console.log(message); // "Welcome to Bahamas!"
 
-//! .slice(startIndex, endIndex) не включае останній символ endIndex не обовʼязковий для витягування символів до кінця рядка
+//! .slice(startIndex, endIndex) не включае останній
+//! Cимвол endIndex не обовʼязковий для витягування символів до кінця рядка
 //! .slice() без аргументів створює точну копію рядка
 // const fullName = "Jacob Mercer";
 // console.log(fullName.slice(0, 4)); // 'Jaco'
@@ -51,7 +52,7 @@ if (hasSpam) {
 // console.log(str.endsWith("world!")); // true
 // console.log(str.endsWith("World!")); // false (метод чутливий до регістру)
 
-//! .indexOf(substr) перше входження рядка в підрядок
+//! .indexOf(substr) перше входження підрядка в рядок
 //! Якщо підрядок не знайдено, метод .indexOf() поверне -1
 //! Число в аргументах автоматично перетворюється на рядок
 // const message = "Welcome to Bahamas1!";
@@ -68,3 +69,26 @@ if (hasSpam) {
 // const trimmedInput = input.trim();
 // console.log(trimmedInput); // "JavaScript is awesome!"
 // console.log(input); // " JavaScript is awesome!    "
+
+function transformString(string) {
+  //! .split() розділяє строку завказанним символом
+  const words = string.split("_");
+  //! .join() обєднує строку з вказаннним розділовим символом
+  return words.join("-");
+}
+
+transformString("user_age"); // "user-age"
+transformString("price_per_droid"); // "price-per-droid"
+
+//! split() дозволяє перетворити рядок на масив, розбивши його за вказаним роздільником
+// const name = "Mango";
+// const letters = name.split("");
+// console.log(letters); // ["M", "a", "n", "g", "o"]
+
+// const message = "JavaScript essentials";
+// const words = message.split(" ");
+// console.log(words); // ["JavaScript", "essentials"]
+
+// const slug = "amazing-french-recipes";
+// const slugParts = slug.split("-");
+// console.log(slugParts); // ["amazing", "french", "recipes"]
